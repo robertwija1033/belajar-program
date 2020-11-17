@@ -54,16 +54,3 @@ print('Sample String :',x)
 print('expected Output :')
 print('No. of Upper case characters : ', upper(x))
 print('No. of Lower case characters : ', lower(x))
-
-def lower(low) :
-    lower = 0
-    for alpha in range(ord('a'),ord('z')+1) :
-        if chr(alpha) in x :
-            lower += 1
-    return lower
-    
-x = 'The quick Brow Fox'
-print('Sample String :',x)
-print('expected Output :')
-print('No. of Upper case characters : ', upper(x))
-print('No. of Lower case characters : ', lower(x))
