@@ -35,22 +35,44 @@
 # tupple = (8,2,3,-1,7)
 # print(hasil(tupple))
 
-def upper(lower) :
-    upper = 0
+def kalimat(x) :
     for a in x :
-        if ord(a) >= ord('A') and ord(a) <= ord('Z') :
-            upper += 1
-    return upper 
+        if a.isalpha() :
+            return True
+        return False
+while True :
+    try :
+        x = input('masukkan kalimat : ')
+        if x.isspace() :
+            raise Exception('yang anda masukkan adalah kosong')
+        elif not kalimat(x) :
+            raise Exception('masukkan minimal 1 huruf')
+    except Exception as d :
+        print('ERROR', d)
+    else :
+        def upper(lower) :
+            upper = 0
+            for a in x :
+                if ord(a) >= ord('A') and ord(a) <= ord('Z') :
+                    upper += 1
+            return upper 
 
-def lower(low) :
-    lower = 0
-    for a in x :
-        if ord(a) >= ord('a') and ord(a) <= ord('z') :
-            lower += 1
-    return lower
-    
-x = 'The quick Brow Fox'
-print('Sample String :',x)
-print('expected Output :')
-print('No. of Upper case characters : ', upper(x))
-print('No. of Lower case characters : ', lower(x))
+        def lower(low) :
+            lower = 0
+            for a in x :
+                if ord(a) >= ord('a') and ord(a) <= ord('z') :
+                    lower += 1
+            return lower
+            
+
+        print('Sample String :',x)
+        print('expected Output :')
+        print('No. of Upper case characters : ', upper(x))
+        print('No. of Lower case characters : ', lower(x))
+    finally :
+        while True :
+            c = input('ulangi[y/n]')
+            if c in ['y','n'] :
+                break
+        if c == 'n' :
+            break
