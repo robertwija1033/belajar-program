@@ -186,7 +186,6 @@ while True :
         print('ERROR', d)
     else :
         a = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven','eight', 'nine']
-        b = ['', '','twen', 'thir', 'for', 'fif', 'six', 'seven','eight', 'nine']
         def bilangan(angka) :
             if angka <= 10 :
                 return a[angka]
@@ -262,7 +261,7 @@ while True :
                     return 'one million'
 
         m = str(n).split('.')
-
+        print(m)
         x = int(m[0])
         y = int(m[-1])
 
